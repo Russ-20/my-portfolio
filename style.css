@@ -63,9 +63,19 @@ body {
 
 /* Boxes */
 .accomplishment-box,
-.socials,
-.kaliwa {
+.socials {
     background-color: #f9f9f9;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.kaliwa {
+    background-color: #550b0b33;
     border: 2px solid #ccc;
     border-radius: 10px;
     padding: 20px;
@@ -85,6 +95,8 @@ body {
 .kaliwa ul {
     margin-left: 5%;
     padding: 0;
+    font-family: "Cascadia Mono", sans-serif;
+    font-weight: 800;
 }
 
 /* Text Content */
