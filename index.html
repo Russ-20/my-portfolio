@@ -13,9 +13,15 @@
 
   <div class="top-bar">
     <h1>Welcome to my website!</h1>
-    <div class="aboutMe">
-      <a href="#aboutMe"><button>About me</button></a>
-    </div>
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#aboutMe">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
 
   <div class="mySelf">
@@ -28,9 +34,23 @@
     <h2>My Carreers:</h2>
   </div>
 
+  <div class="kaliwa2">
+    <div class="accomplishment-box2">
+      <h2>Education</h2>
+      <ul>
+        <li>San Juan National High School 2015-2019</li><br>
+        <li>Arellano University 2019-2021</li>
+        <p>- Computer Science</p>
+        <li>Polytechnic University of the Philippines 2023-present</li>
+        <p>- Diploma in Information Technology</p>
+        
+      </ul>
+    </div>
+  </div>
+
   <div class="kaliwa">
     <div class="accomplishment-box">
-      <h2>Career</h2>
+      <h2>Experience</h2>
       <ul>
         <li>Stuent</li>
         <li>Worked at a Call Center or BPO</li>
@@ -45,6 +65,21 @@
         <li><a href="https://www.instagram.com/rasel_natividad/">Instagram</a></li>
         <li><a href="https://www.linkedin.com/in/rasel-natividad-3a4573282/">LinkedIn</a></li>
       </ul>
+    </div>
+  </div>
+
+  <div class="kaliwa3" id="projects">
+    <div id="accomplishment-box3">
+      <h2>Projects</h2>
+      <ul>
+        <li>HTML</li>
+      </ul>
+    </div>
+
+    <div class="contact">
+      <h2>Contact Me</h2>
+      <p>If you have any questions or would like to get in touch, feel free to reach out!</p>
+      <a href="#contact"><button>Contact Me</button></a>
     </div>
   </div>
 
@@ -77,6 +112,10 @@
     </p>
   </div>
 
+  <div class="back-to-top" id="backToTop" onclick="scrollToTop()">
+    <button>↑ Top</button>
+  </div>
+
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-section">
@@ -89,7 +128,7 @@
         <p><a href="#">Web Design</a></p>
         <p><a href="#">Consulting</a></p>
       </div>
-      <div class="footer-section">
+      <div class="footer-section" id="contact">
         <h3>Contact</h3>
         <p><a href="#">Facebook</a></p>
         <p><a href="#">Instagram</a></p>
@@ -105,10 +144,34 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
     AOS.init();
-  </script>
+
+    function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
+
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
+
+  window.onscroll = function() {
+    const btn = document.getElementById("backToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+</script>
 
 </body>
 </html>
