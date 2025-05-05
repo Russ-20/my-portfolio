@@ -7,71 +7,75 @@ body {
 .top-bar {
     background-color: #333;
     color: white;
-    padding: 15px 20px;
+    padding: 15px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 5px, 5px 5px 0 0;
+    border-radius: 0 0 0 0;
     flex-wrap: wrap;
 }
 
 .top-bar h1 {
+    display: flex;
     margin: 0;
-    font-size: 24px;
-    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    font-family: "Audiowide", sans-serif;
     font-weight: 700;
-    margin-left: 20px;
+    margin-left: 30px;
+    margin-top: 5px;
+    align-items: center;
 } 
 
 .nav-links {
     display: flex;
     gap: 20px;
     font-family: "Oswald", sans-serif;
-  }
+}
   
-  .nav-links a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
-  }
+}
   
-  .nav-links a:hover {
+.nav-links a:hover {
     color: #ccc;
-  }
-  .nav-links {
+}
+.nav-links {
     display: flex;
     gap: 20px;
-  }
+}
   
-  .nav-links a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 600;
     font-family: "Oswald", sans-serif;
-  }
+}
   
   /* HAMBURGER BUTTON - Hidden on desktop */
-  .menu-toggle {
+.menu-toggle {
     display: none;
     font-size: 28px;
     background: none;
     color: white;
     border: none;
     cursor: pointer;
-  }
+}
   
   /* MOBILE STYLES */
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .top-bar {
       flex-direction: column;
       align-items: flex-end;
     }
   
     .menu-toggle {
-      display: block;
+      display: flex;
       margin-left: auto;
-      margin-right: 20px;
+      margin-right: 10px;
+      margin-top: -38px;
     }
   
     .nav-links {
@@ -89,7 +93,7 @@ body {
     .nav-links.active {
       display: flex;
     }
-  }
+}
   
 
 .aboutMe button {
@@ -224,6 +228,22 @@ body {
     font-family: "Cascadia Mono", sans-serif;
     font-weight: 800;
 }
+.contact button {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: black;
+    padding: 12px 24px;
+    border: black 1;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(110, 142, 251, 0.4);
+    transition: 0.3s ease;
+}
+.contact button:hover {
+    box-shadow: 0 6px 25px rgba(167, 119, 227, 0.6);
+    transform: translateY(-2px);
+  }
 
 .company-logos,
 .languages-logos {
@@ -253,9 +273,9 @@ body {
     display: none; /* shown via JS */
     z-index: 1000;
     transition: opacity 0.4s, transform 0.4s;
-  }
+}
   
-  .back-to-top button {
+.back-to-top button {
     background: linear-gradient(135deg, #4a90e2, #0077b6);
     color: white;
     border: none;
@@ -266,12 +286,12 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: background 0.3s, transform 0.3s;
-  }
+}
   
-  .back-to-top button:hover {
+.back-to-top button:hover {
     background: linear-gradient(135deg, #005f99, #004466);
     transform: scale(1.05);
-  }
+}
 
 /* Footer */
 .site-footer {
