@@ -118,6 +118,62 @@ body {
     font-weight: 400;
 }
 
+.songOfTheDay {
+    font-family: "Sofia", sans-serif;
+    font-size: 30px;
+    text-shadow: 3px 3px 3px #ababab;
+    margin-bottom: 10px;
+}
+
+.music-player {
+    width: 300px;
+    height: 300px;
+    background: #1e1e1e;
+    border-radius: 13px;
+    padding: 16px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .cover-art {
+    height: 200px;
+    width: 250px;
+    border-radius: 6px;
+    align-items: center;
+    display: flex;
+    margin-left: 28px;
+    margin-top: 10px;
+  }
+  
+  .song-title {
+    margin: 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Oswald", sans-serif;
+  }
+  
+  .play-pause {
+    background: #e07a75;
+    border: none;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 120px;
+  }
+  
+  .play-pause:hover {
+    background: #ff3b30;
+  }
+
+
 .see h2,
 #aboutMe h2,
 .prog h2,
