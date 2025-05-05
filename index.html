@@ -9,6 +9,7 @@
   <link href="https://fonts.google.com/selection/embed" rel="stylesheet">
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
 <body>
 
@@ -26,10 +27,20 @@
   </div>
 
   <div class="mySelf">
-    <p>My name is Rasel Natividad, and I am currently studying at the Polytechnic University of the Philippines, San Juan campus.<br>
+    <p>My name is Rasel Natividad, and I am currently studying at the Polytechnic University of the Philippines, San Juan campus.
       I’m pursuing a Diploma in Information Technology because I aspire to become a software engineer—my dream career.
     </p>
   </div>
+
+  <center>
+  <h2 class="songOfTheDay">Song of the day</h2>
+  <div class="music-player">
+    <img src="mus.jpg" alt="Album Cover" class="cover-art">
+    <h3 class="song-title">In my dreams</h3>
+    <button id="playBtn" class="play-pause">▶</button>
+    <audio id="audioPlayer" src="REO Speedwagon - In My Dreams (Lyrics).mp3"></audio>
+  </div>
+  </center>
 
   <div class="see">
     <h2>My Carreers:</h2>
@@ -54,10 +65,10 @@
       <h2>Experience</h2>
       <ul>
         <li>Worked at a Call Center or BPO</li>
-        <p>- McDonald's 2019 - 2021</p>
         <p>- Concentrix 2022 - 2023</p>
         <p>- IntouchCX 2023 - 2025</p>
-        <li>Working student balancing night shifts and classes</li>
+        <li>- McDonald's 2019 - 2021</li><br>
+        <p>Working student balancing night shifts and classes</p>
       </ul>
     </div>
 
@@ -75,7 +86,7 @@
     <div id="accomplishment-box3">
       <h2>Projects</h2>
       <ul>
-        <p>Some of my projects are not yet available in public<br> since I am still a student which means I am still<br> in the process of learning.</p>
+        <p>Some of my projects are not yet available in public since I am still a student which means I am still in the process of learning.</p>
       </ul>
     </div>
 
@@ -155,6 +166,19 @@
     const nav = document.getElementById("navLinks");
     nav.classList.toggle("active");
   }
+
+  const playBtn = document.getElementById("playBtn");
+  const audio = document.getElementById("audioPlayer");
+
+  playBtn.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+      playBtn.textContent = "⏸"; // Pause icon
+    } else {
+      audio.pause();
+      playBtn.textContent = "▶"; // Play icon
+    }
+  });
 
   function toggleMenu() {
     const nav = document.getElementById("navLinks");
